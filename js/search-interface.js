@@ -30,7 +30,8 @@ function displayUserInfo(userInfo) {
   var htmlText = "";
   htmlText = htmlText +
             "<div class=row>" +
-            "<div id='avatar' class='col-sm-3 col-sm-push-6'><img src='"+userInfo.avatar_url+"' alt='profile picture' class='img-circle'></div>" +
+            "<div id='avatar' class='col-sm-3 col-sm-push-6'><img src='"+userInfo.avatar_url+
+            "'alt='profile picture' class='img-circle'></div>" +
             "<div class='col-sm-3 col-sm-push-6'><h3>" + userInfo.name + "</h3></div>"+
             "</div>";
   $("#user-info").append(htmlText);
