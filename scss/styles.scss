@@ -1,0 +1,26 @@
+$white: #FFFFFF;
+$lightgrey: rgba(228,228,228,1);
+$black: #000000;
+
+.jumbotron{
+  background: $white;
+  text-align: center;
+}
+
+.img-circle{ 
+  height: 100px;
+}
+
+#user-info, #results{
+  margin-top: 20px;
+}
+
+#avatar{
+  text-align: right;
+}
+
+.panel-primary{
+  background: $lightgrey;
+  border: solid 1px;
+  border-color: $black;
+}
