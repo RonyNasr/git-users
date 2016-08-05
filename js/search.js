@@ -5,13 +5,16 @@ function GitUser(username) {
 }
 
 GitUser.prototype.search = function (displayResults) {
-
-  $.get('https://api.github.com/?access_token='+ apiKey+'/users/'+ this.username +'/repos').then(
+  $.ajax('https://api.github.com/?access_token='+ apiKey).then(
+    $.ajax("https://api.github.com/users/"+this.username+"/repos?sort=created&direction=desc").then(
     function(response){
-      console.log(response);
+      displayResults(response);
     }).fail(function(error) {
       console.log(error.responseJSON.message);
-  });
+    }).fail(function (error) {
+      console.log(error.responseJSON.message);
+    })
+  );
 };
 
 
